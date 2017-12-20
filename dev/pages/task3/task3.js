@@ -10,29 +10,30 @@ const resultText = $('.test__result-text');
 $(function() {
 
 	$('.test__radio').change(function() {
-		let answerText = $(this).attr('id');
-		let answers = $(this).parent('.test__answer').siblings().find('.test__radio');
-		answers.prop('disabled', true);
-		$(this).prop('disabled', false);
-		setRightAnswer(answerText);
 		$('.test__btn').show();
 		$('.test__btn-result').show();
 	});
 
 	$('.test__btn').click(function() {
+		let answerId = $(this).siblings('.test__answers').find('.test__radio:checked').attr('id');
 		nextBlock = $(this).parent('.test__item').next().addClass('show');
 		$(this).parent('.test__item').removeClass('show');
 		$('.test__btn').hide();
 		$('.test__btn-result').hide();
 
+		setRightAnswer(answerId);
+
 		return false;
 	});
 
 	$('.test__btn-result').click(function() {
+		let answerId = $(this).siblings('.test__answers').find('.test__radio:checked').attr('id');
 		let rightAnswerPercent = rightAnswer / correct.length * 100;
 		nextBlock = $(this).parent('.test__item').next().addClass('show');
 		$(this).parent('.test__item').removeClass('show');
-		$('.test__result .test__result-count').text(`${rightAnswer}/${correct.length}`);
+
+		setRightAnswer(answerId);
+
 		setResult(rightAnswerPercent);
 
 		return false;
@@ -55,6 +56,8 @@ function setRightAnswer(text) {
 }
 
 function setResult(percent) {
+	$('.test__result .test__result-count').text(`${rightAnswer}/${correct.length}`);
+
 	if (percent <= 25) {
 		resultVariant.text(`Вы не знаток рок-музыки`);
 		resultImg.attr('src', 'img/task3/res1.jpg');
