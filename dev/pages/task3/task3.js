@@ -1,24 +1,17 @@
 'use strict';
 
+let nextBlock;
 let rightAnswer = 0;
-const correct = ['The Greenhornes', 'ZZ Top', 'The Killers', 'Queens of the Stone Age',
-				'The Last Shadow Puppets', 'Джимми Пэйдж', 'Blur', 'The Beatles'];
-let answer = [];
-
+const correct = [2, 7, 9, 15, 20, 22, 28, 30];
 const resultVariant = $('.test__result .test__result-variant');
 const resultImg = $('.test__result-wrap img');
 const resultText = $('.test__result-text');
-let nextBlock;
 
 $(function() {
 
-	$('.test__radio').each(function() {
-		answer.push($(this));
-	});
-
 	$('.test__radio').change(function() {
+		let answerText = $(this).attr('id');
 		let answers = $(this).parent('.test__answer').siblings().find('.test__radio');
-		let answerText = $(this).next().text();
 		answers.prop('disabled', true);
 		$(this).prop('disabled', false);
 		setRightAnswer(answerText);
@@ -53,7 +46,7 @@ $(function() {
 });
 
 function setRightAnswer(text) {
-	for (var i = 0; i < answer.length; i++) {
+	for (var i = 0; i < correct.length; i++) {
 		if (text == correct[i]) {
 			rightAnswer++;
 			console.log(rightAnswer);
