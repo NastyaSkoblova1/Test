@@ -1,0 +1,71 @@
+extends ../../common/pug/_default
+
+block pageInfo
+	- var page = {}
+	- page.id = 'index'
+	- page.title = 'Task2'
+
+block og
+	//- open graph
+	+og({type: 'website', title: page.title, description: page.description})
+
+append jshead
+	script(src="js/task2.js", defer)
+
+block content
+	
+	main
+
+		.slider
+
+			.slider-wrap
+
+				.slide
+					.item._1
+
+						.item__sale
+							span Sale
+
+						.item__img-wrap
+							.item__img
+						.item__title Sabrina Fossi clock
+						.item__price 79р. 
+							span.item__price_old 200р.
+
+				.slide
+					.item._2
+						.item__img-wrap
+							.item__img
+						.item__title Radio BRAUN
+						.item__price 90р.
+
+				.slide
+					.item._3
+						.item__img-wrap
+							.item__img
+						.item__title Accessories by Ionna Vautrin
+						.item__price 108р.
+
+				.slide
+					.item._4
+						.item__img-wrap
+							.item__img
+						.item__title Accessories by Ionna Vautrin
+						.item__price 108р.
+
+				.slide
+					.item._5
+						.item__img-wrap
+							.item__img
+						.item__title Accessories by Ionna Vautrin
+						.item__price 108р.
+
+				.slide
+					.item._6
+						.item__img-wrap
+							.item__img
+						.item__title Accessories by Ionna Vautrin
+						.item__price 108р.
+
+			span#prev.slider__arrow.slider__arrow_prev
+			span#next.slider__arrow.slider__arrow_next
