@@ -1,0 +1,28 @@
+// ==========
+// Project global styles
+// ==========
+
+// box-sizing reset
+*, *:after, *:before
+	box-sizing: inherit
+
+html
+	box-sizing border-box
+	background-color html_bg
+	font-size 16px
+	
+	+above(1024px)
+		font-size calc(12px + (16 - 12) * (100vw - 320px) / (1280 - 320))
+
+body
+	font-family body_font
+	color body_color
+	line-height body_lh
+	// safari smooth font. prefix mandatory.
+	-webkit-font-smoothing antialiased
+	// prevent fs scale on ios safari
+	text-size-adjust 100%
+
+// ==========
+// Abstract class
+// ==========

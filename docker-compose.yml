@@ -1,0 +1,9 @@
+version: '2'
+services:
+    web:
+        build: .
+        hostname: web
+        volumes:
+          - ./:/opt/app
+        ports:
+          - "80:80"

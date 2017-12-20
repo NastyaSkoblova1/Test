@@ -1,0 +1,274 @@
+extends ../../common/pug/_default
+
+block pageInfo
+	- var page = {}
+	- page.id = 'index'
+	- page.title = 'Task3'
+
+block og
+	//- open graph
+	+og({type: 'website', title: page.title, description: page.description, image: page.image, url: '', img: '', locale: ''})
+
+append jshead
+	script(src="js/task3.js", defer)
+
+block content
+	
+	main
+
+		.test
+
+			.test__item.show
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item1.jpg", alt="Jack White")
+
+					.test__quest-text В какой из этих музыкальных групп не играл Джек Уайт?
+
+				.test__answers
+
+					form
+
+						.test__answer
+							input(type="radio" name="white" id="white1").test__radio
+							label(for="white1") The Raconteurs
+
+						.test__answer
+							input(type="radio" name="white" id="white2").test__radio
+							label(for="white2") The Greenhornes
+
+						.test__answer
+							input(type="radio" name="white" id="white3").test__radio
+							label(for="white3") The Dead Weather
+
+						.test__answer
+							input(type="radio" name="white" id="white4").test__radio
+							label(for="white4") The White Stripes
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item2.jpg", alt="Duo")
+
+					.test__quest-text Какая их этих групп не является дуэтом?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="duo" id="duo1").test__radio
+						label(for="duo1") The Kills
+
+					.test__answer
+						input(type="radio" name="duo" id="duo2").test__radio
+						label(for="duo2") Slaves
+
+					.test__answer
+						input(type="radio" name="duo" id="duo3").test__radio
+						label(for="duo3") ZZ Top
+
+					.test__answer
+						input(type="radio" name="duo" id="duo4").test__radio
+						label(for="duo4") Royal Blood
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item3.jpg", alt="Britain")
+
+					.test__quest-text Только одна из этих групп не является британской. Какая?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="brit" id="brit1").test__radio
+						label(for="brit1") The Killers
+
+					.test__answer
+						input(type="radio" name="brit" id="brit2").test__radio
+						label(for="brit2") Glass Animals
+
+					.test__answer
+						input(type="radio" name="brit" id="brit3").test__radio
+						label(for="brit3") Blur
+
+					.test__answer
+						input(type="radio" name="brit" id="brit4").test__radio
+						label(for="brit4") New Order
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item4.jpg", alt="Rock-n-Roll")
+
+					.test__quest-text Какая из этих групп пока не включена в зал славы рок-н-ролла?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="rock" id="rock1").test__radio
+						label(for="rock1") The Stooges
+
+					.test__answer
+						input(type="radio" name="rock" id="rock2").test__radio
+						label(for="rock2") Pearl Jam
+
+					.test__answer
+						input(type="radio" name="rock" id="rock3").test__radio
+						label(for="rock3") Queens of the Stone Age
+
+					.test__answer
+						input(type="radio" name="rock" id="rock4").test__radio
+						label(for="rock4") Kiss
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item5.jpg", alt="Super")
+
+					.test__quest-text К одному из этих коллективов можно применить термин &#171;супергруппа&#187;. К какому именно?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="super" id="sup1").test__radio
+						label(for="sup1") Led Zeppelin
+
+					.test__answer
+						input(type="radio" name="super" id="sup2").test__radio
+						label(for="sup2") Arctic Monkeys
+
+					.test__answer
+						input(type="radio" name="super" id="sup3").test__radio
+						label(for="sup3") Metallica
+
+					.test__answer
+						input(type="radio" name="super" id="sup4").test__radio
+						label(for="sup4") The Last Shadow Puppets
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item6.jpg", alt="Led Zeppelin")
+
+					.test__quest-text Как зовут гитариста Led Zeppelin?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="led" id="led1").test__radio
+						label(for="led1") Джон Пол Джонс
+
+					.test__answer
+						input(type="radio" name="led" id="led2").test__radio
+						label(for="led2") Джимми Пэйдж
+
+					.test__answer
+						input(type="radio" name="led" id="led3").test__radio
+						label(for="led3") Роберт Плант
+
+					.test__answer
+						input(type="radio" name="led" id="led4").test__radio
+						label(for="led4") Джон Бонэм
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item7.jpg", alt="Grammy")
+
+					.test__quest-text У какого из музыкальных коллективов пока нет ни одной премии &#171;Грэмми&#187;?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="grammy" id="gr1").test__radio
+						label(for="gr1") Arcade Fire
+
+					.test__answer
+						input(type="radio" name="grammy" id="gr2").test__radio
+						label(for="gr2") Rage Against the Machine
+
+					.test__answer
+						input(type="radio" name="grammy" id="gr3").test__radio
+						label(for="gr3") Genesis
+
+					.test__answer
+						input(type="radio" name="grammy" id="gr4").test__radio
+						label(for="gr4") Blur
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item8.jpg", alt="Rolling Stone")
+
+					.test__quest-text Песен какой группы больше всего в списке 500 величайших песен всех времён по версии журнала Rolling Stone?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="rolling" id="rol1").test__radio
+						label(for="rol1") Queen
+
+					.test__answer
+						input(type="radio" name="rolling" id="rol2").test__radio
+						label(for="rol2") Aerosmith
+
+					.test__answer
+						input(type="radio" name="rolling" id="rol3").test__radio
+						label(for="rol3") The Beatles
+
+					.test__answer
+						input(type="radio" name="rolling" id="rol4").test__radio
+						label(for="rol4") The Rolling Stones
+
+
+				button.test__btn-result Узнать результат
+
+
+			.test__result
+
+				.test__result-wrap
+					img(src="", alt="")
+
+					.test__result-desc
+
+						.test__result-count
+						.test__result-variant
+
+				.test__result-text
+
+				a(href="").test__restart Пройти тест ещё раз
