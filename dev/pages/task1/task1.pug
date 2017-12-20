@@ -1,0 +1,44 @@
+extends ../../common/pug/_default
+
+block pageInfo
+	- var page = {}
+	- page.id = 'index'
+	- page.title = 'Task1'
+
+append jshead
+	script(src="js/task3.js", defer)
+
+block content
+	
+	main
+
+		.cover
+
+			.cover__cont(style="background-image: url('https://static.tildacdn.com/tild3439-3432-4534-a336-353435333731/gregshield1810.jpg'); height: 700px;")
+
+				.cover__arrow-wrapper.cover__arrow-wrapper_left
+
+					.cover__arrow.cover__arrow_prev
+						.cover__arrow-body
+							<svg style="display: block" viewBox="0 0 11.3 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <desc>Left</desc> <polyline fill="none" stroke="#222222" stroke-linejoin="butt" stroke-linecap="butt" stroke-width="1" points="0.5,0.5 10.5,10.5 0.5,20.5"></polyline> </svg>
+
+				.cover__arrow-wrapper.cover__arrow-wrapper_right
+
+					.cover__arrow.cover__arrow_next
+						.cover__arrow-body
+							<svg style="display: block" viewBox="0 0 11.3 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <desc>Right</desc> <polyline fill="none" stroke="#222222" stroke-linejoin="butt" stroke-linecap="butt" stroke-width="1" points="0.5,0.5 10.5,10.5 0.5,20.5"></polyline> </svg>
+
+				.cover__container
+
+					.cover__wrapper
+
+						.cover__title A TRUE NORTHERN PLAYA
+
+						.cover__desc Get around by train, bus, car, steamship, cruise ship, bicycle, skis or sleigh.<br>Relax and enjoy your time
+
+						.cover__btn
+							a(href="")
+								span Read more
+
+
+		

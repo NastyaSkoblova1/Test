@@ -5,10 +5,6 @@ block pageInfo
 	- page.id = 'index'
 	- page.title = 'Task2'
 
-block og
-	//- open graph
-	+og({type: 'website', title: page.title, description: page.description})
-
 append jshead
 	script(src="js/task2.js", defer)
 
@@ -19,6 +15,13 @@ block content
 		.slider
 
 			.slider-wrap
+
+				.slide
+					.item._6
+						.item__img-wrap
+							.item__img
+						.item__title Accessories by Ionna Vautrin
+						.item__price 108р.
 
 				.slide
 					.item._1
@@ -55,13 +58,6 @@ block content
 
 				.slide
 					.item._5
-						.item__img-wrap
-							.item__img
-						.item__title Accessories by Ionna Vautrin
-						.item__price 108р.
-
-				.slide
-					.item._6
 						.item__img-wrap
 							.item__img
 						.item__title Accessories by Ionna Vautrin

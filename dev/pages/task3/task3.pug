@@ -5,10 +5,6 @@ block pageInfo
 	- page.id = 'index'
 	- page.title = 'Task3'
 
-block og
-	//- open graph
-	+og({type: 'website', title: page.title, description: page.description, image: page.image, url: '', img: '', locale: ''})
-
 append jshead
 	script(src="js/task3.js", defer)
 

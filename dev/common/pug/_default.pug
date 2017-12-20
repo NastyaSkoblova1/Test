@@ -13,18 +13,6 @@ html(lang="RU")
 		meta(name="description" content= page.description)
 		title= page.title
 
-		// OG
-		block og
-			meta(name="og:type", content="website")
-			meta(property="og:title", content= page.title)
-			meta(property="og:description", content= page.description)
-			meta(property="og:image", content= page.image)
-		// /OG
-
-		// Favicon
-		link(rel="icon", type="image/png", sizes="32x32", href="img/index/favicon.png")
-		// /Favicon
-
 		// Styles
 		block styles
 			link(rel="stylesheet", href="css/styles.css")
@@ -34,9 +22,6 @@ html(lang="RU")
 		// JS Head
 		block jshead
 			script(defer, src="js/common.js")
-
-		include _tag
-
 		// /JS Head
 
 	body

@@ -1,0 +1,137 @@
+.cover
+	width 100%
+	
+	&__cont
+		position relative
+		display flex
+		align-items center
+		background-repeat no-repeat
+		background-position center center
+		background-size cover
+		
+		&::after
+			content ''
+			position absolute
+			top 0
+			bottom 0
+			left 0
+			right 0
+			background-color rgba(0, 0, 0, 0.5)
+			
+	&__container
+		margin-left auto
+		margin-right auto
+		padding-left 10%
+		padding-right 10%
+		width 100%
+		
+		+below(960px)
+			padding-left 15%
+			padding-right 15%
+	
+	&__wrapper
+		position relative
+		z-index 1
+		max-width 760px
+		width 100%
+		padding 60px 0
+	
+	&__textwrapper
+		text-align left
+	
+	&__title
+		font-size 48px
+		font-weight 600
+		line-height 1.23
+		color white
+		
+		+below(490px)
+			font-size 30px
+	
+	&__desc
+		margin-top 30px
+		font-size 20px
+		font-weight 300
+		line-height 1.55
+		color white
+		
+		+above(490px)
+			margin-top 15px
+			font-size 16px
+	
+	&__btn
+		padding-top 50px
+		
+		& a
+			@extend $link-reset
+			display inline-block
+			justify-content center
+			align-items center
+			height 60px
+			padding 20px 60px
+			border 0px solid #ffffff
+			background-color #0066ff
+			border-radius 30px
+		
+		& span
+			font-size 16px
+			font-weight 700;
+			color #ffffff
+	
+	&__arrow-wrapper
+		position absolute
+		top 0
+		bottom 0
+		z-index 5
+		height 100%
+		width 60px!important
+		
+		&_left
+			left 0
+		
+		&_right
+			right 0
+	
+	&__arrow
+		position absolute
+		top 50%
+		z-index 1
+		display inline-block
+		width 50px
+		height 50px
+		background-color white
+		border-radius 50%
+		transform translateY(-50%)
+		cursor pointer
+		
+		+below(645px)
+			width 45px
+			height 45px
+			
+		+below(490px)
+			width 35px
+			height 35px
+		
+		&_prev
+			left 30px
+			
+			+below(490px)
+				left 10px
+			
+			.cover__arrow-body
+				transform translate(-55%,-50%) rotate(180deg)
+		
+		&_next
+			right 30px
+			
+			+below(480px)
+				right 10px
+			
+			.cover__arrow-body
+				transform translate(-45%,-50%)
+	
+	&__arrow-body
+		width 11px
+		position absolute
+		top 50%
+		left 50%
