@@ -4,10 +4,10 @@ const carousel = $('.slider-wrap');
 let slideWidth;
 
 $(function() {
-	slideWidth = $('.slider').width();
+	slideWidth = $('.slide').width();
 
 	$(window).resize(function() {
-		slideWidth = $('.slider').width();
+		slideWidth = $('.slide').width();
 		console.log(slideWidth);
 	});
 

@@ -1,11 +1,8 @@
 .slider
 	position relative
-	width 300px
+	width 100vw
 	overflow hidden
 	margin 0 auto
-	
-	+above(768px)
-		width 500px
 		
 	&__arrow
 		@extend $link-reset
@@ -41,20 +38,26 @@
 	width 10000px
 	position relative
 	top 0
-	left -300px
+	left -100vw
 	
-	+above(768px)
-		left -500px
+	+above(480px)
+		left calc(-100vw / 2)
+	
+	+above(1024px)
+		left calc(-100vw / 3)
 
 .slide
 	display flex
 	flex-direction column
 	justify-content center
 	float left
-	width 300px
+	width 100vw
 	
-	+above(768px)
-		width 500px
+	+above(480px)
+		width calc(100vw / 2)
+	
+	+above(1024px)
+		width calc(100vw / 3)
 
 .transition
 	transition .8s
@@ -90,8 +93,14 @@
 		height 300px
 		margin-bottom 20px
 		
-		+above(768px)
+		+above(375px)
+			height 400px
+		
+		+above(1280px)
 			height 500px
+		
+		+above(1920px)
+			height 700px
 
 	&__img
 		position absolute
@@ -142,6 +151,9 @@
 		+above(768px)
 			margin-bottom 12px
 			font-size 20px
+		
+		+above(1920px)
+			font-size 22px
 
 	&__price
 		font-size 14px
@@ -150,6 +162,9 @@
 		
 		+above(768px)
 			font-size 16px
+		
+		+above(1920px)
+			font-size 18px
 			
 		&_old
 			text-decoration line-through
