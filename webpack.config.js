@@ -11,6 +11,7 @@ module.exports = {
     entry:  {
         common: './dev/common/js/common.js',
         index: './dev/pages/index/index.js',
+        task2: './dev/pages/task2/task2.js',
         task3: './dev/pages/task3/task3.js'
     },
     output:  {

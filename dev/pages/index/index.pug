@@ -1,0 +1,270 @@
+extends ../../common/pug/_default
+
+block pageInfo
+	- var page = {}
+	- page.id = 'index'
+	- page.title = 'Task3'
+
+append jshead
+	script(src="js/index.js", defer)
+
+block content
+	
+	main
+
+		.test.test1
+
+			.test__item.show
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item1.jpg", alt="Jack White")
+
+					.test__quest-text В какой из этих музыкальных групп не играл Джек Уайт?
+
+				.test__answers
+
+					form
+
+						.test__answer
+							label The Raconteurs
+								input(type="radio" name="white" value="1").test__input
+
+						.test__answer
+							label The Greenhornes
+								input(type="radio" name="white" value="2").test__input
+
+						.test__answer
+							label The Dead Weather
+								input(type="radio" name="white" value="3").test__input
+
+						.test__answer
+							label The White Stripes
+								input(type="radio" name="white" value="4").test__input
+				button.test__btn._check Проверить
+				button.test__btn._next Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item2.jpg", alt="Duo")
+
+					.test__quest-text Какая их этих групп не является дуэтом?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="duo" id="5").test__input
+						label(for="5") The Kills
+
+					.test__answer
+						input(type="radio" name="duo" id="6").test__input
+						label(for="6") Slaves
+
+					.test__answer
+						input(type="radio" name="duo" id="7").test__input
+						label(for="7") ZZ Top
+
+					.test__answer
+						input(type="radio" name="duo" id="8").test__input
+						label(for="8") Royal Blood
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item3.jpg", alt="Britain")
+
+					.test__quest-text Только одна из этих групп не является британской. Какая?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="brit" id="9").test__input
+						label(for="9") The Killers
+
+					.test__answer
+						input(type="radio" name="brit" id="10").test__input
+						label(for="10") Glass Animals
+
+					.test__answer
+						input(type="radio" name="brit" id="11").test__input
+						label(for="11") Blur
+
+					.test__answer
+						input(type="radio" name="brit" id="12").test__input
+						label(for="12") New Order
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item4.jpg", alt="Rock-n-Roll")
+
+					.test__quest-text Какая из этих групп пока не включена в зал славы рок-н-ролла?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="rock" id="13").test__input
+						label(for="13") The Stooges
+
+					.test__answer
+						input(type="radio" name="rock" id="14").test__input
+						label(for="14") Pearl Jam
+
+					.test__answer
+						input(type="radio" name="rock" id="15").test__input
+						label(for="15") Queens of the Stone Age
+
+					.test__answer
+						input(type="radio" name="rock" id="16").test__input
+						label(for="16") Kiss
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item5.jpg", alt="Super")
+
+					.test__quest-text К одному из этих коллективов можно применить термин &#171;супергруппа&#187;. К какому именно?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="super" id="17").test__input
+						label(for="17") Led Zeppelin
+
+					.test__answer
+						input(type="radio" name="super" id="18").test__input
+						label(for="18") Arctic Monkeys
+
+					.test__answer
+						input(type="radio" name="super" id="19").test__input
+						label(for="19") Metallica
+
+					.test__answer
+						input(type="radio" name="super" id="20").test__input
+						label(for="20") The Last Shadow Puppets
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item6.jpg", alt="Led Zeppelin")
+
+					.test__quest-text Как зовут гитариста Led Zeppelin?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="led" id="21").test__input
+						label(for="21") Джон Пол Джонс
+
+					.test__answer
+						input(type="radio" name="led" id="22").test__input
+						label(for="22") Джимми Пэйдж
+
+					.test__answer
+						input(type="radio" name="led" id="23").test__input
+						label(for="23") Роберт Плант
+
+					.test__answer
+						input(type="radio" name="led" id="24").test__input
+						label(for="24") Джон Бонэм
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item7.jpg", alt="Grammy")
+
+					.test__quest-text У какого из музыкальных коллективов пока нет ни одной премии &#171;Грэмми&#187;?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="grammy" id="25").test__input
+						label(for="25") Arcade Fire
+
+					.test__answer
+						input(type="radio" name="grammy" id="26").test__input
+						label(for="26") Rage Against the Machine
+
+					.test__answer
+						input(type="radio" name="grammy" id="27").test__input
+						label(for="27") Genesis
+
+					.test__answer
+						input(type="radio" name="grammy" id="28").test__input
+						label(for="28") Blur
+
+
+				button.test__btn Дальше
+
+			.test__item
+
+				.test__quest
+
+					.test__quest-img
+						img(src="img/task3/item8.jpg", alt="Rolling Stone")
+
+					.test__quest-text Песен какой группы больше всего в списке 500 величайших песен всех времён по версии журнала Rolling Stone?
+
+				.test__answers
+
+					.test__answer
+						input(type="radio" name="rolling" id="29").test__input
+						label(for="29") Queen
+
+					.test__answer
+						input(type="radio" name="rolling" id="30").test__input
+						label(for="30") The Beatles
+
+					.test__answer
+						input(type="radio" name="rolling" id="31").test__input
+						label(for="31") Aerosmith
+
+					.test__answer
+						input(type="radio" name="rolling" id="32").test__input
+						label(for="32") The Rolling Stones
+
+
+				button.test__btn-result Узнать результат
+
+
+			.test__result
+
+				.test__result-wrap
+					img(src="", alt="")
+
+					.test__result-desc
+
+						.test__result-count
+						.test__result-variant
+
+				.test__result-text
+
+				a(href="").test__restart Пройти тест ещё раз
