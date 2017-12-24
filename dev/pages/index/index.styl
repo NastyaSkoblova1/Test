@@ -88,10 +88,10 @@ main
 		padding 20pr
 		border-bottom 1px solid #cec6c6
 	
-	&__radio
+	&__input
 		display none
 	
-	&__radio + label
+	&__input + span
 		display block
 		position relative
 		padding-left 35pr
@@ -102,7 +102,7 @@ main
 		+above(768px)
 			font-size 20pr
 	
-	&__radio + label::before
+	&__input[type="radio"] + span::before, &__input[type="checkbox"] + span::before
 		content ''
 		position absolute
 		top 50%
@@ -111,20 +111,28 @@ main
 		height 20px
 		background-color transparent
 		border 1px solid #898b8b
-		border-radius 50%
 		transform translateY(-50%)
 		transition all .3s ease
 	
-	&__radio:checked + label::before, &__radio:checked:hover + label::before
-		background-color #45acac
-		border 2px solid #45acac
+	&__input[type="radio"] + span::before
+		border-radius 50%
+
+	&__input[type="checkbox"] + span::before
+		border-radius 5px
+	
+	&__input:checked + span::before, &__input:checked:hover + span::before
+		background-color #c5ad84
+		border 2px solid #c5ad84
 		box-shadow inset 0 0 0 2px white
 	
-	&__radio:hover + label::before
-		border 3px solid #45acac
+	&__input:hover + span::before
+		border 3px solid #c5ad84
 	
-	&__radio:disabled:hover + label::before
+	&__input:disabled:hover + span::before
 		border 1px solid #898b8b
+	
+	&__input:checked:disabled:hover + span::before
+		border 2px solid #c5ad84
 	
 	&__result
 		text-align center
@@ -222,3 +230,9 @@ main
 			+above(768px)
 				width 22px
 				height 26px
+		
+._correct
+	color #06d806
+
+._wrong
+	color #ea0d1a
