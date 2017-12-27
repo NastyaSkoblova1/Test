@@ -3,7 +3,7 @@ extends ../../common/pug/_default
 block pageInfo
 	- var page = {}
 	- page.id = 'index'
-	- page.title = 'Task3'
+	- page.title = 'index'
 
 append jshead
 	script(src="js/index.js", defer)
@@ -14,7 +14,19 @@ block content
 
 		.test.test1
 
-			.test__item.show
+			.test__start
+
+				.test__start-wrap
+
+					.test__start-subtitle Тест
+
+					.test__start-title Насколько хорошо вы разбираетесь в&#160;рок-музыке
+
+					.test__start-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					button.test__start-btn Начать тест
+
+			.test__item
 
 				.test__quest
 
@@ -32,22 +44,29 @@ block content
 								input(type="radio" name="white" value="1").test__input
 								span The Raconteurs
 
+							.test__details Джейк Уайт один из основателей группы The Raconteurs.
+
 						.test__answer
 							label
 								input(type="radio" name="white" value="2").test__input
 								span The Greenhornes
+
+							.test__details В The Greenhornes Джек Уайт не играл.
 
 						.test__answer
 							label
 								input(type="radio" name="white" value="3").test__input
 								span The Dead Weather
 
+							.test__details Джейк Уайт один из основателей группы The Dead Weather.
+
 						.test__answer
 							label
 								input(type="radio" name="white" value="4").test__input
 								span The White Stripes
 
-				button.test__btn._check Проверить
+							.test__details Джейк Уайт один из основателей группы The White Stripes.
+
 				button.test__btn._next Дальше
 
 			.test__item
@@ -68,22 +87,36 @@ block content
 								input(type="radio" name="duo" value="5").test__input
 								span The Kills
 
+							.test__details The Kills - это дуэт. А правильный ответ - ZZ Top.
+
 						.test__answer
 							label
 								input(type="radio" name="duo" value="6").test__input
 								span Slaves
+
+							.test__details Slaves - это дуэт. А правильный ответ - ZZ Top.
 
 						.test__answer
 							label
 								input(type="radio" name="duo" value="7").test__input
 								span ZZ Top
 
+							.test__details ZZ Top - это трио.
+
 						.test__answer
 							label
 								input(type="radio" name="duo" value="8").test__input
 								span Royal Blood
 
-				button.test__btn._check Проверить
+							.test__details Royal Blood - это дуэт. А правильный ответ - ZZ Top.
+
+						.test__answer
+							label
+								input(type="radio" name="duo" value="33").test__input
+								span The White Stripes
+
+							.test__details The White Stripes - это дуэт. А правильный ответ - ZZ Top.
+
 				button.test__btn._next Дальше
 
 			.test__item
@@ -104,20 +137,35 @@ block content
 								input(type="checkbox" name="brit" value="9").test__input
 								span The Killers
 
+							.test__details The Killers - американская группа.
+
 						.test__answer
 							label
 								input(type="checkbox" name="brit" value="10").test__input
 								span Glass Animals
+
+							.test__details Glass Animals -  британская группа.
 
 						.test__answer
 							label
 								input(type="checkbox" name="brit" value="11").test__input
 								span Blur
 
+							.test__details Blur -  британская группа.
+
 						.test__answer
 							label
 								input(type="checkbox" name="brit" value="12").test__input
 								span New Order
+
+							.test__details New Order -  британская группа.
+
+						.test__answer
+							label
+								input(type="checkbox" name="brit" value="34").test__input
+								span Metallica
+
+							.test__details Metallica - американская группа.
 
 				button.test__btn._check Проверить
 				button.test__btn._next Дальше
@@ -138,22 +186,29 @@ block content
 							input(type="radio" name="rock" value="13").test__input
 							span The Stooges
 
+						.test__details The Stooges включены в зал славы 2010 году.
+
 					.test__answer
 						label
 							input(type="radio" name="rock" value="14").test__input
 							span Pearl Jam
+
+						.test__details Pearl Jam включены в зал славы 2017 году.
 
 					.test__answer
 						label
 							input(type="radio" name="rock" value="15").test__input
 							span Queens of the Stone Age
 
+						.test__details Queens of the Stone Age пока не включены в зал славы рок-н-ролла.
+
 					.test__answer
 						label
 							input(type="radio" name="rock" value="16").test__input
 							span Kiss
 
-				button.test__btn._check Проверить
+						.test__details Kiss включены в зал славы 2014 году.
+
 				button.test__btn._next Дальше
 
 			.test__item
@@ -172,22 +227,29 @@ block content
 							input(type="radio" name="super" value="17").test__input
 							span Led Zeppelin
 
+						.test__details Суппергруппа - это группа, все участники которой уже получили широкую известность в составе других групп или как сольные исполнители. И нет, это не Led Zeppelin.
+
 					.test__answer
 						label
 							input(type="radio" name="super" value="18").test__input
 							span Arctic Monkeys
+
+						.test__details Суппергруппа - это группа, все участники которой уже получили широкую известность в составе других групп или как сольные исполнители. И нет, это не Arctic Monkeys. 
 
 					.test__answer
 						label
 							input(type="radio" name="super" value="19").test__input
 							span Metallica
 
+						.test__details Суппергруппа - это группа, все участники которой уже получили широкую известность в составе других групп или как сольные исполнители. И нет, это не Metallica.
+
 					.test__answer
 						label
 							input(type="radio" name="super" value="20").test__input
 							span The Last Shadow Puppets
 
-				button.test__btn._check Проверить
+						.test__details The Last Shadow Puppets можно считать супергруппой, так как оба её участника были известны до основания коллектива. Алекс Тёрнер как лидер Arctic Monkeys, Майлз Кейн как лидер The Rascals.
+
 				button.test__btn._next Дальше
 
 			.test__item
@@ -206,22 +268,29 @@ block content
 							input(type="radio" name="led" value="21").test__input
 							span Джон Пол Джонс
 
+						.test__details Джон Пол Джонс - бас-гитарист Led Zeppelin.
+
 					.test__answer
 						label
 							input(type="radio" name="led" value="22").test__input
 							span Джимми Пэйдж
+
+						.test__details Джимми Пэйдж  - гитарист Led Zeppelin.
 
 					.test__answer
 						label
 							input(type="radio" name="led" value="23").test__input
 							span Роберт Плант
 
+						.test__details Роберт Плант - вокалист Led Zeppelin.
+
 					.test__answer
 						label
 							input(type="radio" name="led" value="24").test__input
 							span Джон Бонэм
 
-				button.test__btn._check Проверить
+						.test__details Джон Бонэм - барабанщик Led Zeppelin.
+
 				button.test__btn._next Дальше
 
 			.test__item
@@ -240,22 +309,29 @@ block content
 							input(type="radio" name="grammy" value="25").test__input
 							span Arcade Fire
 
-					.test__answer
-						label
-							input(type="radio" name="grammy" value="26").test__input
-							span Rage Against the Machine
+						.test__details У Arcade Fire есть Грэмми за альбом The Suburbs.
 
 					.test__answer
 						label
 							input(type="radio" name="grammy" value="27").test__input
 							span Genesis
 
+						.test__details У Genesis четыре премии Грэмми.
+
+					.test__answer
+						label
+							input(type="radio" name="grammy" value="26").test__input
+							span Rage Against the Machine
+
+						.test__details У Rage Against the Machine есть две премии Грэмми.
+
 					.test__answer
 						label
 							input(type="radio" name="grammy" value="28").test__input
 							span Blur
 
-				button.test__btn._check Проверить
+						.test__details Blur один раз были номинированы на Грэмми, но награду не получили.
+
 				button.test__btn._next Дальше
 
 			.test__item
@@ -274,258 +350,29 @@ block content
 							input(type="radio" name="rolling" value="29").test__input
 							span Queen
 
-					.test__answer
-						label
-							input(type="radio" name="rolling" value="30").test__input
-							span The Beatles
-
-					.test__answer
-						label
-							input(type="radio" name="rolling" value="31").test__input
-							span Aerosmith
-
-					.test__answer
-						label
-							input(type="radio" name="rolling" value="32").test__input
-							span The Rolling Stones
-
-				button.test__btn._check Проверить
-				button.test__btn-result Узнать результат
-
-
-			.test__result._1
-
-				.test__result-wrap
-					img(src="img/task3/res1.jpg", alt="")
-
-					.test__result-desc
-
-						.test__result-count
-						.test__result-variant Вы не знаток рок-музыки
-
-				.test__result-text Вероятно, вы не любитель рок-музыки. Или просто не особо интересуетесь происходящим в данной сфере. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				a(href="").test__restart Пройти тест ещё раз
-			
-			.test__result._2
-
-				.test__result-wrap
-					img(src="img/task3/res2.jpg", alt="")
-
-					.test__result-desc
-
-						.test__result-count
-						.test__result-variant Вы - начинающий рокер
-
-				.test__result-text Скорее всего, вы только знакомитесь с рок-музыкой и знаете какие-то широкоизвестные факты. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				a(href="").test__restart Пройти тест ещё раз
-			
-			.test__result._3
-
-				.test__result-wrap
-					img(src="img/task3/res3.jpg", alt="")
-
-					.test__result-desc
-
-						.test__result-count
-						.test__result-variant Вы - ценитель рок-музыки
-
-				.test__result-text Вы любите рок-музыку и следите за происходящим в ней. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				a(href="").test__restart Пройти тест ещё раз
-			
-			.test__result._4
-
-				.test__result-wrap
-					img(src="img/task3/res4.jpg", alt="")
-
-					.test__result-desc
-
-						.test__result-count
-						.test__result-variant Вы - прожжённый рокер
-
-				.test__result-text Вы великолепны. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-				a(href="").test__restart Пройти тест ещё раз
-	
-
-		.test.test2
-
-			.test__item.show
-
-				.test__quest
-
-					.test__quest-img
-						img(src="img/task3/item1.jpg", alt="Jack White")
-
-					.test__quest-text В какой из этих музыкальных групп не играл Джек Уайт?
-
-				.test__answers
-
-					form
-
-						.test__answer
-							label
-								input(type="radio" name="white" value="1").test__input
-								span The Raconteurs
-
-						.test__answer
-							label
-								input(type="radio" name="white" value="2").test__input
-								span The Greenhornes
-
-						.test__answer
-							label
-								input(type="radio" name="white" value="3").test__input
-								span The Dead Weather
-
-						.test__answer
-							label
-								input(type="radio" name="white" value="4").test__input
-								span The White Stripes
-
-				button.test__btn._check Проверить
-				button.test__btn._next Дальше
-
-			.test__item
-
-				.test__quest
-
-					.test__quest-img
-						img(src="img/task3/item2.jpg", alt="Duo")
-
-					.test__quest-text Какая их этих групп не является дуэтом?
-
-				.test__answers
-
-					form
-
-						.test__answer
-							label
-								input(type="radio" name="duo" value="5").test__input
-								span The Kills
-
-						.test__answer
-							label
-								input(type="radio" name="duo" value="6").test__input
-								span Slaves
-
-						.test__answer
-							label
-								input(type="radio" name="duo" value="7").test__input
-								span ZZ Top
-
-						.test__answer
-							label
-								input(type="radio" name="duo" value="8").test__input
-								span Royal Blood
-
-				button.test__btn._check Проверить
-				button.test__btn._next Дальше
-			
-			.test__item
-
-				.test__quest
-
-					.test__quest-img
-						img(src="img/task3/item7.jpg", alt="Grammy")
-
-					.test__quest-text У какого из музыкальных коллективов пока нет ни одной премии &#171;Грэмми&#187;?
-
-				.test__answers
-
-					.test__answer
-						label
-							input(type="radio" name="grammy" value="25").test__input
-							span Arcade Fire
-
-					.test__answer
-						label
-							input(type="radio" name="grammy" value="26").test__input
-							span Rage Against the Machine
-
-					.test__answer
-						label
-							input(type="radio" name="grammy" value="27").test__input
-							span Genesis
-
-					.test__answer
-						label
-							input(type="radio" name="grammy" value="28").test__input
-							span Blur
-
-				button.test__btn._check Проверить
-				button.test__btn._next Дальше
-
-			.test__item
-
-				.test__quest
-
-					.test__quest-img
-						img(src="img/task3/item3.jpg", alt="Britain")
-
-					.test__quest-text Отметьте все британские группы.
-
-				.test__answers
-
-					form
-
-						.test__answer
-							label
-								input(type="checkbox" name="brit" value="9").test__input
-								span The Killers
-
-						.test__answer
-							label
-								input(type="checkbox" name="brit" value="10").test__input
-								span Glass Animals
-
-						.test__answer
-							label
-								input(type="checkbox" name="brit" value="11").test__input
-								span Blur
-
-						.test__answer
-							label
-								input(type="checkbox" name="brit" value="12").test__input
-								span New Order
-
-				button.test__btn._check Проверить
-				button.test__btn._next Дальше
-
-			.test__item
-
-				.test__quest
-
-					.test__quest-img
-						img(src="img/task3/item8.jpg", alt="Rolling Stone")
-
-					.test__quest-text Песен какой группы больше всего в списке 500 величайших песен всех времён по версии журнала Rolling Stone?
-
-				.test__answers
-
-					.test__answer
-						label
-							input(type="radio" name="rolling" value="29").test__input
-							span Queen
+						.test__details В список входят несколько песен Queen. Но больше всего в нём песен The Beatles.
 
 					.test__answer
 						label
 							input(type="radio" name="rolling" value="30").test__input
 							span The Beatles
 
+						.test__details В список входит 23 песни The Beatles. И в этом плане они лидеры.
+
 					.test__answer
 						label
 							input(type="radio" name="rolling" value="31").test__input
 							span Aerosmith
+
+						.test__details В список входят несколько песен Aerosmith. Но больше всего в нём песен The Beatles.
 
 					.test__answer
 						label
 							input(type="radio" name="rolling" value="32").test__input
 							span The Rolling Stones
 
-				button.test__btn._check Проверить
+						.test__details В список входит 14 песен The Rolling Stones. Больше только у The Beatles.
+
 				button.test__btn-result Узнать результат
 
 
