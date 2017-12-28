@@ -56,6 +56,17 @@ main
 		
 		&:hover
 			background-color #c89f6d - 15%
+		
+	&__number
+		margin-bottom 15px
+		font-size 14px
+		font-weight 600
+		text-align center
+		color #c5ad84
+		
+		+above(768px)
+			margin-bottom 30px
+			font-size 16px
 	
 	&__quest
 		padding-bottom 20px
@@ -150,6 +161,10 @@ main
 		position relative
 		top 0
 		left 0
+		text-align center
+		
+		+above(768px)
+			margin-bottom 45px
 	
 	&__start-wrap
 		position relative
@@ -183,7 +198,7 @@ main
 			margin-bottom 60px
 			font-size 24px
 	
-	&__result, &__start
+	&__result
 		text-align center
 		
 		+above(768px)

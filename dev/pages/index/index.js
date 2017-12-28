@@ -10,12 +10,14 @@
 			let rightAnswersAmount = 0;
 			let currentQuestion = 0;
 			let checkedRadio;
+			let questionCount = 0;
 			let checkedCheckbox = [];
 			let rightChecked = false;
 
 			$('.test__start-btn').on('click', function() {
 				$(this).parents('.test__start').hide();
 				$(this).parents('.test__start').next().show();
+				showNumber();
 			});
 
 			$('.test__input').change(function() {
@@ -41,7 +43,7 @@
 					}
 		
 					testItem.find('.test__input[value="' + currentRightAnswer + '"]').parent().addClass('_correct');
-					testItem.find('.test__input[value="' + currentRightAnswer + '"]').parent().siblings().show();
+					// testItem.find('.test__input[value="' + currentRightAnswer + '"]').parent().siblings().show();
 				}
 
 				if ($(this).attr('type') === 'checkbox') {
@@ -78,7 +80,7 @@
 				if (testItem.find('.test__input').attr('type') === 'checkbox') {
 					[...options.rightAnswers[currentQuestion]].forEach((item) => {
 						testItem.find('.test__input[value="' + +item + '"]').parent().addClass('_correct');
-						testItem.find('.test__input[value="' + +item + '"]').parent().siblings().show();
+						// testItem.find('.test__input[value="' + +item + '"]').parent().siblings().show();
 					});
 
 					checkedCheckbox.forEach((item) => {
@@ -101,6 +103,11 @@
 			$('.test__btn._next').on('click', function() {
 				$(this).parents('.test__item').hide();
 				$(this).parents('.test__item').next().show();
+				showNumber();
+
+				$('body,html').animate({
+					scrollTop: 0
+				}, 0);
 
 				console.log(rightAnswersAmount);
 
@@ -110,6 +117,10 @@
 			$('.test__btn-result').on('click', function() {
 				$(this).parents('.test__item').hide();
 				showResult();
+
+				$('body,html').animate({
+					scrollTop: 0
+				}, 0);
 
 				console.log(rightAnswersAmount);
 			});
@@ -134,6 +145,11 @@
 				if (resultPercent > 75) {
 					$('.test__result._4').show();
 				}
+			}
+
+			function showNumber() {
+				questionCount++;
+				$('.test__number').text(`${questionCount}/${options.rightAnswers.length}`);
 			}
 		};
 
